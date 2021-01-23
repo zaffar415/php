@@ -1,0 +1,499 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Online Exam</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Font Awesome-->
+        <script src="https://kit.fontawesome.com/c5b0d4ad62.js"></script>
+        
+        <!-- jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+
+
+        <script>
+            var i=0;
+            $("li").click(function() {
+                alert("clicked");
+            });
+
+            var image = [];
+            
+
+            image[0]="image/image.jpg";
+            image[1]="image/image1.jpg";
+            image[2]="image/image2.jpg";
+
+            function changeimg() {
+                document.slide.src=image[i];
+
+                if(i<image.length-1){
+                    i++;
+                }
+                else{
+                    i=0;
+                }
+                time=setTimeout("changeimg()", 5000);
+            }
+            window.onload=changeimg;
+
+            function display()
+            {
+                $(".announcement").toggle("display");
+            }
+        </script>
+
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            
+                margin:auto;
+            }
+            #header {
+            list-style-type:none;
+            font-size:16px;
+            margin:-10px;
+            padding:0px;
+            padding-bottom:2px;
+            overflow:hidden;
+            background-color:#333333;
+            }
+
+            #header li {
+            float:left;
+            padding-bottom:20px;
+            padding-top:0px;
+            }
+            
+            #header a {
+            color:white;
+            text-align:center;
+            padding:15px; 
+            text-decoration:none;
+            }
+
+            #header li :hover {
+            background:green;
+            }
+
+            #drop-down {
+            list-style-type: none;
+            position:absolute;
+            padding:0px;
+            background:blue;
+            margin-top:1%;
+            display:none;
+            }
+
+            #drop-down li {
+                float:none;
+                padding:10px 10px;
+                background:black;    
+            }
+
+            #drop-down li a {
+            padding:0px 0px;
+            background:;
+            }
+
+            #header li:hover #drop-down {
+            display:block;
+            }
+
+            .container{
+            width:90px;
+            height:90px;
+            text-align:center;
+            margin-top:100px;
+            border-radius:50px;
+            margin-left:150px;
+            float:left;
+            margin-right:50px;
+            }
+
+            #bottom {
+                background:#709096;
+                font-size:12px;
+                color:#bfe1de;
+                display:flex;
+                justify-content:center; 
+            }
+
+            #footer {
+                width:550px;
+                list-style-type:none;
+                float:none;
+                position:relative;
+                margin-top:0px;
+                background:none;
+                overflow:hidden;
+            }
+
+            #footer-menu {
+            list-style-type:none;
+            text-decoration:none;
+            margin-top:-20px;
+            font-size:12px;
+            overflow:hidden;
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            background-color:#333333;
+            }
+
+            #footer-menu li{
+                float:left;
+                padding:10px;
+                text-align:center;
+            }
+            #footer-menu li a{
+                color:black;
+                text-decoration: none;
+            }
+
+            .footer :hover{
+                padding-left:10px;
+            }
+
+            #size {
+                width:1300px;
+                margin:auto;
+            }
+
+            @media screen and (max-width:1000px) {
+                #size{
+                 width:auto;
+                }
+                .container {
+                    margin-left:100px;
+                    margin-right:10px;
+                }
+            }
+            @media screen and (max-width:450px) {
+                #logo img {
+                    width:400px;
+                    margin:auto;
+                }
+                #header li {
+                    width:100%;
+                    float:none;
+                    text-align:center;
+                }
+                #header li ul {
+                    display:block;
+                    position:relative;
+                } 
+
+
+                #bottom {
+                    display:block;
+                }
+                #footer {
+                    margin:auto;
+                    width:auto;
+                    margin-left:0px;
+                }
+            }
+
+            
+
+            
+        </style>
+    
+    
+    </head>
+
+    <body>
+    
+        <ul id="header">
+            <br>
+            <li id="logo" style="text-align:center; width:100%;"><img src="image/CAHC-WEB-BANNER-FULL.png" alt="Cahc"></li>
+        </ul>
+        <ul id="header" style="padding-top:8px; display:flex; flex-wrap: wrap; padding-bottom:10px; justify-content:center;">
+            <li style="padding-left:25px; "><a href="">Home</a></li>
+            <li><a href="">About</a>
+                <ul id="drop-down">
+                    <li><a href="">Management</a></li>
+                    <li><a href="">Vision and Mission</a></li>
+                    <li><a href="">Core Values</a></li>
+                    <li><a href="">Code of Conduct</a></li>
+                    <li><a href="">NAAC Accrediation</a></li>
+                    <li><a href="">Messages</a></li>
+                </ul>
+            </li>
+            <li><a href="">Programmes</a></li>
+            <li><a href="">Academics</a>
+                <ul id="drop-down">
+                    <li><a href="">Annual reports</a></li>
+                    <li><a href="">Admission</a></li>
+                    <li><a href="">Calendar</a></li>
+                </ul>
+            </li>
+            <li><a href="">Examination</a>
+                <ul id="drop-down">
+                    <li><a href="">Members of COE</a></li>
+                    <li><a href="">Announcements</a></li>
+                    <li><a href="">Syllabus</a></li>
+                    <li><a href="">Question Bank</a></li>
+                    <li><a href="">Student Service</a></li>
+                </ul>
+            </li>
+            <li><a href="">Research</a>
+                <ul id="drop-down">
+                    <li><a href="">Research Announcement</a></li>
+                    <li><a href="">Research Guides</a></li>
+                    <li><a href="">List of Journals</a></li>
+                    <li><a href="">List of Projects</a></li>
+                    <li><a href="">Research Facilitiies</a></li>
+                </ul>
+            </li>
+            <li><a href="">Facilities</a>
+                <ul id="drop-down">
+                    <li><a href="">Central Library</a></li>
+                    <li><a href="">Infrastructure</a></li>
+                </ul>
+            </li>
+            <li><a href="">Extension Activities</a>
+                <ul id="drop-down">
+                    <li><a href="">Sport</a></li>
+                    <li><a href="">NSS</a></li>
+                    <li><a href="">NCC</a></li>
+                    <li><a href="">YRC</a></li>
+                    <li><a href="">RRC</a></li>
+                    <li><a href="">Cocurricular Activities</a></li>
+                    <li><a href="">Extracurricular</a></li>
+                </ul>
+            </li>
+            <li><a href="">NIRF</a></li>
+            <li><a href="">IQAC</a>
+                <ul id="drop-down" style="width:200px;">
+                    <li><a href="" style="width:90%;">Annual Quality Assurance Report</a></li>
+                    <li><a href="" style="width:90%;">National Assesment and Accrediation Council</a></li>
+                    <li><a href="" style="width:90%;">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="">Media</a>
+                <ul id="drop-down">
+                    <li><a href="">Hakeem Times</a></li>
+                    <li><a href="">CAHC News</a></li>
+                </ul>
+            </li>
+            <li><a href="">E Resources</a>
+                <ul id="drop-down">
+                    <li><a href="">MHED E-Contents</a></li>
+                    <li><a href="">LMS</a></li>
+                </ul>
+            </li>
+            <li><a href="">Alumni</a>
+                <ul id="drop-down">
+                    <li><a href="">Alumni Achievements</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="">Contact Us</a></li>
+            <li><a href="index.php?i=3">Login</a></li>
+            <li><a href="">Student</a>
+                <ul id="drop-down">
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Syllabus</a></li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+    
+        <div id="size">
+            <div style="margin-top:15px;">
+                <p style="color:#519dad; padding-top:8px; margin-bottom:5px; text-align:center; box-shadow:0px -5px 10px -10px grey; font-size:52px;"><strong>Enter</strong> to <strong>Learn</strong></p>
+                <img src="http://www.cahc.edu.in/wp-content/themes/emphasize/images/shadow.png" alt="shadow" style="text-align:center; width:100%;">
+            </div>
+            <marquee behavior="" direction="left" style="width:70%; margin-left:15%; color:#519dad; font-size:24px; margin-top:50px;">
+                <a href="index.php?i=1" style="color:#519dad; text-decoration:none;">Online Examination</a><br> <br>
+                <a href="" style="color:#519dad; text-decoration:none;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Semester Examination Results - APRIL, 2019     Self Study Report - NAAC 3rd Cycle</a>
+            </marquee>
+            
+            <div id="image-slider" style="text-align:center; padding-top:55px;">
+                <img src="" name="slide" width="80%" alt="">
+            </div>
+
+            <div style="padding-top:10%; margin-left:50px;">
+                <p style="text-align:center; font-size:32px;"><strong>Services</strong></p>
+                <div class="container" style="background:#f15951;">
+                    <i class='fas fa-address-book' style='font-size:32px; color:white; padding-top:50%;'></i>
+                    <a href="" style="color:#519dad;"><p style="margin-top:80px">Academic</p></a>
+                </div>
+                <div class="container" style="background:#b52a5c;">
+                    <i class="far fa-star" style="font-size:32px; color:white; padding-top:50% "></i>
+                    <a href="" style="color:#519dad;"><p style="margin-top:80px">Research</p></a> 
+                </div>
+                <div class="container" style="background:#3ab3a3;">
+                    <i class="fas fa-check" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href="" style="color:#519dad;"><p style="margin-top:80px">IQAC</p></a>
+                </div>
+                <div class="container" style="background:#d7bb8e;">
+                    <i class="fas fa-fish" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href=""><p style="margin-top:80px; margin-left:-50px; width:150px;">OIE Reference Lab</p></a>
+                </div>
+                <div class="container" style="background:#004c68;">
+                    <i class="fas fa-shield-alt" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href=""><p style="margin-top:80px">Examination</p></a>
+                </div>
+                <div class="container" style="background:#f8931e;">
+                    <i class="fas fa-users" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href=""><p style="margin-top:80px">Sports</p></a>
+                </div>
+                <div class="container" style="background:#29485b;">
+                    <i class="fas fa-cubes" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href=""><p style="margin-top:80px">Alumni</p></a>
+                </div>
+                <div class="container" style="background:#34a853;">
+                    <i class="far fa-envelope" style="font-size:32px; color:white; padding-top:50%"></i>
+                    <a href=""><p style="margin-top:80px">WebMail</p></a>
+                </div>
+            </div>
+    
+            <div style="width:50%; margin-top:600px; margin-left:100px;">
+                <p style="color:#519dad; font-size:18px">Upcoming Events</p>
+                <p>There are no uncoming event at this time.</p>
+                <br>
+                <a href="" style="text-decoration:none; color:#519dad; font-size:20px;">Click here to view Event Calendar</a>
+            </div>
+
+            <aside style="width:40%; margin-top:-120px; margin-left:60%;">
+                <p style="font-size:24px; color:#519dad;">Announcement</p>
+                <div style="border:1px solid lightgrey; border-radius:8px; background:#f5f5f5; width:75%">
+                    <p style="padding:10px;"><a onclick=display() style="text-decoration:none">Semester Examination November, 2019 Arrear Examination on Saturdays Time Table</a> </p>
+                    <div class="announcement" style="background:white; display:none;">
+                    <span>Semester Examination April,2019 Arrear Examinations on Saturdays Time Table Click Here to View/Download By Controller of Examinations … <br>
+                    <button style="background:green; border:1px solid darkgreen; border-radius:5px; "><a href="" style="text-decoration:none; color:white">Read more...</a>  </button></span>
+                    </div>
+                </div>
+                <br>
+                <div style="border:1px solid lightgrey; border-radius:8px; background:#f5f5f5; width:75%">
+                    <p style="padding:10px;"><a onclick=display() style="text-decoration:none">Circular - Application for Semester Examination Fees -Reg.</a> </p>
+                    <div class="announcement" style="background:white; display:none;">
+                    <span>Circular to the Course Completed Students Semester Examination November ,2019 Application for Exam Fees has been issued to the respective … <br>
+                    <button style="background:green; border:1px solid darkgreen; border-radius:5px; "><a href="" style="text-decoration:none; color:white">Read more...</a>  </button></span>
+                    </div>
+                </div>
+                <br>
+                <div style="border:1px solid lightgrey; border-radius:8px; background:#f5f5f5; width:75%">
+                    <p style="padding:10px;"><a onclick=display() style="text-decoration:none">Instant Examinations Result - May,2019</a> </p>
+                    <div class="announcement" style="background:white; display:none;">
+                    <span>Instant Examinations Result – May, 2019 Click Here to Download/View … <br>
+                    <button style="background:green; border:1px solid darkgreen; border-radius:5px; "><a href="" style="text-decoration:none; color:white">Read more...</a>  </button></span>
+                    </div>
+                </div>
+                <br>
+                <div style="border:1px solid lightgrey; border-radius:8px; background:#f5f5f5; width:75%">
+                    <p style="padding:10px;"><a onclick=display() style="text-decoration:none">Revaluation Result - April,2019</a> </p>
+                    <div class="announcement" style="background:white; display:none;">
+                    <span>Revaluation Result – April, 2019 Collect the Instant Examinations Application from the respective Office and last date to pay Instant … <br>
+                    <button style="background:green; border:1px solid darkgreen; border-radius:5px; "><a href="" style="text-decoration:none; color:white">Read more...</a>  </button></span>
+                    </div>
+                </div>
+                <br>
+                <a href="" style="text-decoration:none; color:#519dad; font-size:24px;">Click Here to view All Announcements</a>
+            </aside>
+
+            <div id="Academics" style="width:70%; overflow:scroll">
+                <p style="margin-left:100px;">Academics</p>
+                <div style="width:250%; height:180px; overflow:scroll;">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:100px;" alt="">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                    <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                </div>
+            </div>
+
+            <div>
+                <p style="margin-left:100px;">Students Achievements</p>
+                <img src="image/image.jpg" style="width:245px; height:160px; margin-left:100px;" alt="">
+                <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+                <img src="image/image.jpg" style="width:245px; height:160px; margin-left:10px;" alt="">
+            </div>
+
+        </div>
+
+
+
+
+        <div id="bottom" style="">
+            <ul id="footer" style="">
+                <p style="font-size:20px; padding-top:50px">Quick Links</p>
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Admission</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;"> 
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Courses</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Services</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">E-Content</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Media</a></li>
+            </ul>
+
+            <ul id="footer" style="">
+                <p style="font-size:20px; padding-top:50px" >Recent Updates</p>
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Ph.D. Viva-Vocd in English</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">One Day International Seminar on recent Trends in Material Chemistry</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Faculty Development Programme 2019</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Semester Examination November, 2019 Arrear Examination on Saturdays Time table</a></li>
+                <hr style="margin-top:7px; margin-bottom:10px;">
+                <li class="footer" style="float:none;"><a href="" style="text-decoration:none; color:#bfe1de;">Career Oriented Training 2019</a></li>
+            </ul>
+            <br>
+        </div>
+
+        <div style="text-align:center; font-size:28px; background:#333333">
+            <ul style="color:black">
+                <a href="" style="color:black;"><i class="fab fa-youtube"></i></a>    
+                <a href="" style="color:black;"><i class="fab fa-twitter"></i></a>
+                <a href="" style="color:black;"><i class="fab fa-google-plus"></i></a>
+                <a href="" style="color:black;"><i class="fab fa-pinterest"></i></a>    
+                <a href="" style="color:black;"><i style="transform :rotate(45deg);" class="fas fa-wifi"></i></a>
+            </ul>
+        </div>
+        <div style="text-align:center; width:auto;">
+            <ul id="footer-menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Programmes</a></li>
+                <li><a href="">Academics</a></li>
+                <li><a href="">Examination</a></li>
+                <li><a href="">Research</a></li>
+                <li><a href="">Facilities</a></li>
+                <li><a href="">Extension</a></li>
+                <li><a href="">NIRF</a></li>
+                <li><a href="">IQAC</a></li>
+                <li><a href="">Media</a></li>
+                <li><a href="">E Resources</a></li>
+                <li><a href="">Alumni</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="index.php?i=3">Login</a></li>
+                <li><a href="">Student</a></li>
+            </ul>
+            <ul id="footer-menu">
+            <li style="margin:0px; color:black; text-align:center; font-size:12px; width:100%">Copyright © 2019 | C. Abdul Hakeem College (Autonomous) | Developed and Maintained by Hakeem College. All rights reserved. </p>        
+            </ul>
+        </div>
+
+    </body>
+</html>
