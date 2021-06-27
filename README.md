@@ -1,2 +1,2 @@
 # php
-My core php projects
+core php projects
